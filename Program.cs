@@ -24,3 +24,18 @@ string PrintArray(int[] array) // метод печать массива
     }
     return res;
 }
+int[] EvenNumbers(int[] array)// метод создания другого массива на основе первого, состоящего из чётных чисел
+{
+    int[] arrayB = new int[array.Length];
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+        {
+            arrayB[count] = array[i];
+            count++;
+        }
+    }
+    Array.Resize(ref arrayB, count);
+    return arrayB;
+}
