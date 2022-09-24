@@ -39,3 +39,7 @@ int[] EvenNumbers(int[] array)// метод создания другого ма
     Array.Resize(ref arrayB, count);
     return arrayB;
 }
+int[] array = CreateArray(10); // создаем массив
+FillArray(array, 10, 100); // заполняем массив
+Console.WriteLine(PrintArray(array)); //печатаем начальный массив
+Console.WriteLine(PrintArray(EvenNumbers(array))); // печатаем массив на основе первого, но только чётных числа
